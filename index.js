@@ -14,7 +14,7 @@ const app = express();
 //MIddlewares
 app.use(
   cors({
-    origin: "",
+    origin: "https://portfolio-6q18.onrender.com",
     methods: ["POST", "GET"],
   })
 );
