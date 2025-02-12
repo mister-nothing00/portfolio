@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Navbar from "./components/personal/Navbar";
 
 import "./App.css";
-import { Spinner } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 
 function App() {
   const { loading, user } = UserData();
@@ -16,14 +16,21 @@ function App() {
   return (
     <>
       {loading ? (
-        <Spinner display={"block"} mx={"auto"} my={"50%"} />
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          height={"100vh"}
+          width={"100%"}
+        >
+          <Spinner size={32} />
+        </Box>
       ) : (
         <BrowserRouter>
           <header className="header">
             <Navbar />
           </header>
           <main className="container-main">
-           
             <Routes>
               <Route
                 path="/admin"

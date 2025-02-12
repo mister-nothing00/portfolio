@@ -14,7 +14,7 @@ const app = express();
 //MIddlewares
 app.use(
   cors({
-    origin: "*",
+    origin: "",
     methods: ["POST", "GET"],
   })
 );
