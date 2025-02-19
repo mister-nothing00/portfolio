@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://portfolio-6q18.onrender.com",
+        target: "http://localhost:5000",
       },
     },
   },

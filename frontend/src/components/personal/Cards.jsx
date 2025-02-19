@@ -51,6 +51,7 @@ function Cards() {
           letterSpacing={0.5}
           fontSize={{ base: "6xl", md: "8xl", lg:"9xl" }}
           ml={2}
+          mb={{base:4, md:0}}
           color={"#91c0f2"}
         >
           Creation

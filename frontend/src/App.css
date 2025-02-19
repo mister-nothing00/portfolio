@@ -61,10 +61,10 @@ scrollbar-color: #bfdbfe #f0f4f8; /* Colore barra e sfondo */
   25% { border-color:#05CB8E; }
   50% { border-color:#68b4ff; }
   75% { border-color: #05CB8E; }
-  100% { border-color: #60a3e7; }
+  100% { border-color: #26fbff; }
 }
 
 .animated-border {
-  
+  opacity: 0.8;
   animation: borderAnimation 8s infinite linear;
 }

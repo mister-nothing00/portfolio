@@ -58,7 +58,7 @@ function Hero() {
                 boxShadow=" rgba(100, 100, 111, 0.5) 0px 2px 12px 0px"
                 variant={"outline"}
                 border={"1px solid #eaeaea"}
-                width={{ base: "auto", md: "auto" }}
+                width={{ base: "30vh", md: "auto" }}
                 _hover={{
                   fontWeight: "bold",
                   backgroundColor: "#a3cfff",
@@ -68,6 +68,7 @@ function Hero() {
                   boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                   transition: "all 0.2s ease-in",
                 }}
+                mx={{ base: "auto", md: "auto" }}
               >
                 {tech}
               </Button>
@@ -85,14 +86,18 @@ function Hero() {
           <Text
             letterSpacing={0.5}
             fontFamily={"Montserrat"}
-            fontSize={{ base: "5xl", md: "8xl" }}
+            fontSize={{ base: "6xl", md: "8xl" }}
             fontWeight={"bold"}
-            color={"white"}
+            color="#91C0F2"
             mb={2}
           >
             Francesco
           </Text>
-          <Text fontFamily={"Montserrat"} fontSize={{ base: "sm", md: "md" }}>
+          <Text
+            fontFamily={"Montserrat"}
+            fontSize={{ base: "sm", md: "md" }}
+            color={"gray.400"}
+          >
             An entry-level full-stack developer specializing in React Native,
             WordPress, and the MERN stack, passionate about building intuitive
             and impactful digital solutions.
@@ -136,6 +141,7 @@ function Hero() {
               as={RouterLink}
               to="https://github.com/mister-nothing00"
               target="_blank"
+              textDecoration={"none"}
             >
               <Button
                 fontFamily={"Montserrat"}
@@ -162,9 +168,9 @@ function Hero() {
           <Image
             src={DarkContainer}
             objectFit={"cover"}
-            rounded={"xl"}
+            rounded={"4xl"}
             width={"100%"}
-            border={"2px solid #bfdbfe"}
+            border={"1.5px solid #bfdbfe"}
             className="animated-border"
           />
         </Box>
