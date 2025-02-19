@@ -21,11 +21,7 @@ import { MdOutlineMonitor } from "react-icons/md";
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
         gapX={6}
         gapY={8}
-<<<<<<< HEAD
         my={"80px"}
-=======
-        my={150}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         px={{base:2, md:4}}
       >
         {/* Titolo */}

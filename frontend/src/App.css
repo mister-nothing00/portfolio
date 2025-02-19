@@ -54,7 +54,6 @@ scrollbar-color: #bfdbfe #f0f4f8; /* Colore barra e sfondo */
   justify-content: center;
   align-items: center;
 }
-<<<<<<< HEAD
 
 
 @keyframes borderAnimation {
@@ -69,5 +68,3 @@ scrollbar-color: #bfdbfe #f0f4f8; /* Colore barra e sfondo */
   
   animation: borderAnimation 8s infinite linear;
 }
-=======
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0

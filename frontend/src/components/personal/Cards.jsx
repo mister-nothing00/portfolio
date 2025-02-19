@@ -6,16 +6,12 @@ import {
   Text,
   Link,
   useBreakpointValue,
-<<<<<<< HEAD
   Center,
-=======
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 } from "@chakra-ui/react";
 import { BsStars } from "react-icons/bs";
 import React, { memo, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-<<<<<<< HEAD
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar } from "swiper/modules";
@@ -24,26 +20,10 @@ import { Link as RouterLink } from "react-router-dom";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { IoChevronDownCircle } from "react-icons/io5";
 
-=======
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/scrollbar";
-
-import { Scrollbar } from "swiper/modules";
-import { useProjects } from "../../context/Projects";
-import { useColorMode } from "../ui/color-mode";
-import { Link as RouterLink } from "react-router-dom";
-
-import { FaLink, FaGithub } from "react-icons/fa";
-import { IoChevronDownCircle } from "react-icons/io5";
-
-// Helper function to truncate description
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 const truncateText = (text, maxLength) => {
   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 };
 
-<<<<<<< HEAD
 function Cards() {
   const { projects, fetchProjects } = useProjects();
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -72,53 +52,21 @@ function Cards() {
           fontSize={{ base: "6xl", md: "8xl", lg:"9xl" }}
           ml={2}
           color={"#91c0f2"}
-=======
- function Cards() {
-  const { projects, fetchProjects } = useProjects();
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === "dark";
-  const isMobile = useBreakpointValue({ sm: true, md: false });
-
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
-
-  return (
-    <Flex id="creations" flexDirection={"column"} fontFamily={"Montserrat"} my={150}>
-      <Box display={"flex"} alignItems={"center"} mb={4}>
-        <BsStars size={isMobile ? 18 : 24} color="gray.100" />
-        <Heading
-          fontFamily={"Montserrat"}
-          letterSpacing={0.5}
-          fontSize={{ base: "4xl", md: "6xl" }}
-          ml={2}
-          color={isDark ? "#91c0f2" : "blue.600"}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         >
           Creation
         </Heading>
       </Box>
       <Text
         display={"flex"}
-<<<<<<< HEAD
         justifyContent={{base:"center"}}
-=======
-        justifyContent={"end"}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         animation={"linear"}
         fontFamily={"Montserrat"}
         letterSpacing={0.5}
         fontSize={"xs"}
-<<<<<<< HEAD
         color={"gray.400"}
         width={"100%"}
       >
         Scroll left or right
-=======
-        color={"gray.50"}
-      >
-        Drop left or right
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
       </Text>
       <Box>
         <Swiper
@@ -137,13 +85,10 @@ function Cards() {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-<<<<<<< HEAD
             1440: {
               slidesPerView: 4,
               spaceBetween: 40,
             },
-=======
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
           }}
           scrollbar={{
             hide: true,
@@ -155,14 +100,9 @@ function Cards() {
             projects.map((project) => (
               <SwiperSlide key={project._id}>
                 <Box
-<<<<<<< HEAD
                   boxShadow={
                     "  rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
                   }
-=======
-                  
-                  boxShadow={"  rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
                   overflow="auto"
                   p={4}
                   mb={16}
@@ -232,7 +172,6 @@ function Cards() {
           )}
         </Swiper>
       </Box>
-<<<<<<< HEAD
       {/*Scroll down* */}
       <Box
         display={"flex"}
@@ -243,19 +182,6 @@ function Cards() {
       >
         <IoChevronDownCircle size={32} />
       </Box>
-=======
-        {/*Scroll down* */}
-            <Box
-              display={"flex"}
-              justifyContent="center"
-              alignItems={"center"}
-              mb={4}
-              animation="bounce 2s infinite"
-       
-            >
-              <IoChevronDownCircle size={32} />
-            </Box>
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
     </Flex>
   );
 }

@@ -32,24 +32,14 @@ const certificates = [
         alignItems={"center"}
         width={"100%"}
         px={{base:2, md:4}}
-<<<<<<< HEAD
         my={{base:"80px"}}
-=======
-        my={150}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
       >
         {/* Presentazione */}
         <Text
           fontFamily={"Montserrat"}
-<<<<<<< HEAD
           fontSize={{ base: "sm", md: "xl", lg:"xx-large", xl:"xxx-large" }}
           lineHeight={{ base: "28px", md: "36px", lg:"52px", xl:"68px" }}
           letterSpacing={2}
-=======
-          fontSize={{ sm: "xl", md: "4xl" }}
-          lineHeight={{ sm: "80px", md: "64px" }}
-          letterSpacing={{base:2, md:1}}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
           fontWeight={"medium"}
           width={"100%"}
           textAlign={{ base: "left", md: "left" }}
@@ -66,16 +56,10 @@ const certificates = [
         <Flex
           mt={10}
           gap={6}
-<<<<<<< HEAD
           wrap={{base:"wrap", md:"nowrap"}}
           justifyContent={{ base: "center", md: "space-between" }}
           alignItems="center"
           width={"100%"}
-=======
-          wrap="wrap"
-          justifyContent={{ base: "center", md: "space-around" }}
-          alignItems="center"
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         >
           {certificates.map((certificate, index) => (
             <Box
@@ -101,10 +85,7 @@ const certificates = [
                 fontSize="sm"
                 fontWeight="semibold"
                 letterSpacing={1}
-<<<<<<< HEAD
                 color={"gray.500"}
-=======
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
                 mb={2}
               >
                 {certificate.name}
@@ -123,11 +104,7 @@ const certificates = [
         </Box>
       </Flex>
 
-<<<<<<< HEAD
      
-=======
-      {/* Scroll down */}
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
     </>
   );
 }

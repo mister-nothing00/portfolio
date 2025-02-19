@@ -1,29 +1,17 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from "react";
-=======
-import React, { createContext, useContext, useState } from "react";
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 import Swal from "sweetalert2";
 
 import axios from "axios";
 
-<<<<<<< HEAD
 
 const ProjectsContext = createContext();
 
 
-=======
-// Crea un contesto per i progetti
-const ProjectsContext = createContext();
-
-// Funzione che fornisce i progetti e le funzioni per interagire con l'API
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 export const ProjectsProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-<<<<<<< HEAD
 
   const fetchProjects = async () => {
     setLoading(true);
@@ -31,15 +19,6 @@ export const ProjectsProvider = ({ children }) => {
     try {
       const response = await axios.get("/api/project/all");
       setProjects(response.data);
-=======
-  // Funzione per caricare tutti i progetti
-  const fetchProjects = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get("/api/project/all");
-      setProjects(response.data);
-
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
       setLoading(false);
     } catch (err) {
       setError("Errore nel recupero dei progetti");
@@ -53,11 +32,7 @@ export const ProjectsProvider = ({ children }) => {
     try {
       const response = await axios.post("/api/project/add", projectData, {
         headers: {
-<<<<<<< HEAD
           "Content-Type": "multipart/form-data",
-=======
-          "Content-Type": "multipart/form-data", // Importante per l'invio di file
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         },
       });
       setProjects((prev) => [...prev, response.data.newProject]);
@@ -81,11 +56,7 @@ export const ProjectsProvider = ({ children }) => {
     }
   };
 
-<<<<<<< HEAD
   
-=======
-  // Funzione per eliminare un progetto
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
   const deleteProject = async (projectId) => {
     setLoading(true);
     try {
@@ -103,13 +74,8 @@ export const ProjectsProvider = ({ children }) => {
     } catch (err) {
       Swal.fire({
         position: "center",
-<<<<<<< HEAD
         icon: "error",
         title: "Errore nella cancellazione del progetto",
-=======
-        icon: "success",
-        title: "Progetto cancellato correttamente !",
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         showConfirmButton: false,
         timer: 1500,
       });
@@ -119,13 +85,10 @@ export const ProjectsProvider = ({ children }) => {
     }
   };
 
-<<<<<<< HEAD
 
   useEffect(()=>{
     fetchProjects()
   },[])
-=======
->>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
   return (
     <ProjectsContext.Provider
       value={{
