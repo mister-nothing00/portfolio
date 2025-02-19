@@ -14,7 +14,7 @@ const app = express();
 //MIddlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://portfolio-6q18.onrender.com",
     methods: ["POST", "GET"],
   })
 );
