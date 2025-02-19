@@ -56,7 +56,11 @@ export const UserProvider = ({ children }) => {
 
   async function fetchUser() {
     try {
+<<<<<<< HEAD
       const {data} = await axios.get("/api/user/me");
+=======
+      const { data } = await axios.get("/api/user/me");
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
       setUser(data);
       setIsAuth(true);
       setLoading(false);

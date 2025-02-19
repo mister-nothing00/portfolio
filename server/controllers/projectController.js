@@ -2,6 +2,10 @@ import Project from "../models/Project.js";
 import cloudinary from "../utils/cloudinaryConfig.js";
 import { dataUri } from "../middlewares/upload.js";
 
+<<<<<<< HEAD
+=======
+// Aggiungere un progetto
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 export const addProject = async (req, res) => {
   try {
     const { title, description, webLink, githubLink } = req.body;
@@ -23,6 +27,7 @@ export const addProject = async (req, res) => {
 
     await newProject.save();
 
+<<<<<<< HEAD
     res
       .status(201)
       .json({ message: "Progetto aggiunto con successo", newProject });
@@ -33,14 +38,27 @@ export const addProject = async (req, res) => {
   }
 };
 
+=======
+    res.status(201).json({ message: "Progetto aggiunto con successo", newProject });
+  } catch (error) {
+    res.status(500).json({ message: "Errore nel server", error: error.message });
+  }
+};
+
+// Visualizzare tutti i progetti
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
 export const getAllProjects = async (req, res) => {
   try {
     const projects = await Project.find().sort({ createdAt: -1 });
     res.status(200).json(projects);
   } catch (error) {
+<<<<<<< HEAD
     res
       .status(500)
       .json({ message: "Errore nel server", error: error.message });
+=======
+    res.status(500).json({ message: "Errore nel server", error: error.message });
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
   }
 };
 
@@ -62,8 +80,12 @@ export const deleteProject = async (req, res) => {
 
     res.status(200).json({ message: "Progetto eliminato con successo" });
   } catch (error) {
+<<<<<<< HEAD
     res
       .status(500)
       .json({ message: "Errore nel server", error: error.message });
+=======
+    res.status(500).json({ message: "Errore nel server", error: error.message });
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
   }
 };

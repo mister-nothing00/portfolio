@@ -24,19 +24,27 @@ function Navbar() {
   return (
     <>
       <Flex
+<<<<<<< HEAD
         width={{ base: "95%", lg: "98%" }}
+=======
+        width={"100%"}
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
         justifyContent={"space-between"}
         alignItems={"center"}
         pt={8}
         px={4}
+<<<<<<< HEAD
         mx={{ base: "auto" }}
         mb={{ base: 0, md: 16, lg: 8, xl: 0, xlTo2xl: 0 }}
+=======
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
       >
         {/*heading* */}
         <Box display={"block"} width={"100%"}>
           <Link to={"/"} as={RouterLink} textDecoration={"none"}>
             <Heading
               fontFamily={"Montserrat"}
+<<<<<<< HEAD
               fontSize={{
                 base: "16px",
                 md: "18px",
@@ -44,6 +52,9 @@ function Navbar() {
                 xl: "20px",
                 xlTo2xl: "28px",
               }}
+=======
+              fontSize={isMobile ? "16px" : "20px"}
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
               fontWeight={"semibold"}
               letterSpacing={1}
               _hover={{ color: "#bfdbfe", transition: "color 0.4s ease-in" }}
@@ -155,7 +166,13 @@ function Navbar() {
                     creations
                   </Link>
                 </MenuItem>
+<<<<<<< HEAD
               ) : null}
+=======
+              ) : (
+                ""
+              )}
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
               <MenuItem asChild value="login">
                 <Link
                   as={RouterLink}
@@ -174,7 +191,13 @@ function Navbar() {
                   Login
                 </Link>
               </MenuItem>
+<<<<<<< HEAD
               {isMobile ? null : (
+=======
+              {isMobile ? (
+                ""
+              ) : (
+>>>>>>> d6953083819fe6e426f84f2c22ced656f1cf68a0
                 <MenuItem asChild value="admin">
                   <Link
                     as={RouterLink}
